@@ -30,6 +30,17 @@ function headerShadow() {
   }
 }
 
+function downloadPDF() {
+  var pdfURL = 'Argha_CV_2.pdf';
+  console.log('a');
+  // Create an anchor element
+  var link = document.createElement('a');
+  link.href = pdfURL;
+  link.download = 'Argha_CV_2.pdf';
+  link.click();
+  console.log('a');
+}
+
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText",{
