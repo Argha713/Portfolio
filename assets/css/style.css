@@ -293,6 +293,11 @@ nav{
     text-align: center;
     margin-bottom: 5em;
 }
+.top-header-Project{
+    text-align: center;
+    margin-bottom: 5em;
+    margin-top: 2em;
+}
 .top-header h1{
     font-weight: 600;
     color: var(--text-color-second);
@@ -372,6 +377,7 @@ h3{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
     width: 30%;
     height: 250px;
     background: var(--color-white);
@@ -404,10 +410,13 @@ h3{
 }
 .project-box:hover.project-box i,
 .project-box:hover.project-box>h3,
+.project-box:hover.project-box>button,
 .project-box:hover.project-box>label{
     color: var(--color-white);
     z-index: 2;
 }
+
+
 
 /* ----- CONTACT BOX ----- */
 .contact-info{
@@ -636,3 +645,69 @@ footer{
         width: 100%;
     }
 }
+
+
+
+.hidden-project-details {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    overflow: auto;
+}
+
+.project-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 85%; /* Adjust width as needed */
+    max-height: 90%;
+    height: 85%; /* Adjust height as needed */
+    background-color: #fff;
+    /* padding: 20px; */
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-details iframe {
+    width: 100%;
+    height: 99%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    background: none;
+    border: none;
+}
+
+.project-btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.project-btn>i{
+    margin-left: 10px;
+}
+
+.project-box:hover.project-box>button{
+    background: var(--color-white);
+    color: var(--text-color-second);
+}
+
